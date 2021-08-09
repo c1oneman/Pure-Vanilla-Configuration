@@ -11,11 +11,11 @@
 verbose: false
 config-version: 18
 settings:
-  tps-catchup: true
+  tps-catchup: false
   server-mod-name: Purpur
   use-alternate-keepalive: true
   disable-give-dropping: false
-  dont-send-useless-entity-packets: true
+  dont-send-useless-entity-packets: false
   lagging-threshold: 19.0
   allow-water-placement-in-the-end: true
   messages:
@@ -683,7 +683,7 @@ world-settings:
       villager:
         ridable: false
         ridable-in-water: false
-        brain-ticks: 2
+        brain-ticks: 4
         use-brain-ticks-only-when-lagging: true
         follow-emerald-blocks: false
         can-be-leashed: false
@@ -699,7 +699,7 @@ world-settings:
           radius: 0
           limit: 0
         lobotomize:
-          enabled: true
+          enabled: false
           check-interval: 60
       vindicator:
         ridable: false
