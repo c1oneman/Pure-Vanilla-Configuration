@@ -1,18 +1,18 @@
 # This is the main configuration file for Paper.
 # As you can see, there's tons to configure. Some options may impact gameplay, so use
 # with caution, and make sure you know what each option does before configuring.
-# 
+#
 # If you need help with the configuration or have any questions related to Paper,
 # join us in our Discord or IRC channel.
-# 
+#
 # Discord: https://discord.gg/papermc
-# IRC: #paper @ irc.esper.net ( https://webchat.esper.net/?channels=paper ) 
-# Website: https://papermc.io/ 
-# Docs: https://paper.readthedocs.org/ 
+# IRC: #paper @ irc.esper.net ( https://webchat.esper.net/?channels=paper )
+# Website: https://papermc.io/
+# Docs: https://paper.readthedocs.org/
 
 use-display-name-in-quit-message: false
 verbose: false
-config-version: 20
+config-version: 21
 settings:
   log-named-entity-deaths: true
   fix-entity-position-desync: true
@@ -34,7 +34,7 @@ settings:
   velocity-support:
     enabled: false
     online-mode: false
-    secret: ''
+    secret: ""
   watchdog:
     early-warning-every: 5000
     early-warning-delay: 10000
@@ -53,13 +53,16 @@ settings:
     allow-headless-pistons: true
     allow-permanent-block-break-exploits: true
     allow-piston-duplication: true
-    allow-permanent-block-break-exploits-readme: This setting controls if players
+    allow-permanent-block-break-exploits-readme:
+      This setting controls if players
       should be able to break bedrock, end portals and other intended to be permanent
       blocks.
-    allow-piston-duplication-readme: This setting controls if player should be able
+    allow-piston-duplication-readme:
+      This setting controls if player should be able
       to use TNT duplication, but this also allows duplicating carpet, rails and potentially
       other items
-    allow-headless-pistons-readme: This setting controls if players should be able
+    allow-headless-pistons-readme:
+      This setting controls if players should be able
       to create headless pistons.
   console:
     enable-brigadier-highlighting: true
@@ -74,14 +77,19 @@ settings:
       title: 8192
       author: 8192
       page: 16384
+  use-display-name-in-quit-message: false
 timings:
+  really-enabled: false
+  url: https://timings.aikar.co/
   enabled: true
   verbose: true
   server-name-privacy: false
   hidden-config-entries:
-  - database
-  - settings.bungeecord-addresses
-  - settings.velocity-support.secret
+    - database
+    - settings.bungeecord-addresses
+    - settings.velocity-support.secret
+    - settings.seed
+    - server-ip
   history-interval: 300
   history-length: 3600
   server-name: Pure Vanilla - SMP
@@ -91,9 +99,11 @@ messages:
     connection-throttle: Connection throttled! Please wait before reconnecting.
     flying-player: Flying is not enabled on this server
     flying-vehicle: Flying is not enabled on this server
-    authentication-servers-down: ''
+    authentication-servers-down: ""
 world-settings:
   default:
+    piglins-guard-chests: true
+    allow-player-cramming-damage: false
     show-sign-click-command-failure-msgs-to-player: false
     map-item-frame-cursor-limit: 128
     max-leash-distance: 10.0
@@ -174,21 +184,21 @@ world-settings:
       max-chunk-section-index: 3
       update-radius: 2
       hidden-blocks:
-      - gold_ore
-      - iron_ore
-      - coal_ore
-      - lapis_ore
-      - mossy_cobblestone
-      - obsidian
-      - chest
-      - diamond_ore
-      - redstone_ore
-      - clay
-      - emerald_ore
-      - ender_chest
+        - gold_ore
+        - iron_ore
+        - coal_ore
+        - lapis_ore
+        - mossy_cobblestone
+        - obsidian
+        - chest
+        - diamond_ore
+        - redstone_ore
+        - clay
+        - emerald_ore
+        - ender_chest
       replacement-blocks:
-      - stone
-      - oak_planks
+        - stone
+        - oak_planks
     generator-settings:
       flat-bedrock: false
     game-mechanics:
@@ -254,6 +264,8 @@ world-settings:
     unsupported-settings:
       fix-invulnerable-end-crystal-exploit: true
     entity-per-chunk-save-limit:
+      fireball: -1
+      small_fireball: -1
       experience_orb: -1
       snowball: -1
       ender_pearl: -1
@@ -266,10 +278,10 @@ world-settings:
       spawn-chance-max: 75
     door-breaking-difficulty:
       zombie:
-      - HARD
+        - HARD
       vindicator:
-      - NORMAL
-      - HARD
+        - NORMAL
+        - HARD
     mobs-can-always-pick-up-loot:
       zombies: false
       skeletons: false
@@ -285,3 +297,10 @@ world-settings:
       immune-to-wither-effect:
         wither: true
         wither-skeleton: true
+    tick-rates:
+      sensor:
+        villager:
+          secondarypoisensor: 40
+      behavior:
+        villager:
+          validatenearbypoi: -1
