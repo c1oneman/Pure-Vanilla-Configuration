@@ -209,7 +209,7 @@ world-settings:
       disable-end-credits: false
       disable-unloaded-chunk-enderpearl-exploit: true
       disable-relative-projectile-velocity: false
-      disable-mob-spawner-spawn-egg-transformation: false
+      disable-mob-spawner-spawn-egg-transformation: true
       pillager-patrols:
         spawn-chance: 0.2
         spawn-delay:
